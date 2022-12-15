@@ -1,4 +1,4 @@
-# Solutions
+# 🍜 Danny's Diner: Solutions
 
 💻 Work performed on Azure Data Studio 💻
 
