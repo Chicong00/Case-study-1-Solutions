@@ -12,7 +12,7 @@ join dbo.menu as m
 on s.product_id = m.product_id
 group by s.customer_id
 ````
-#### Result
+**Result**
 | customer_id | total_sales |
 | ----------- | ----------- |
 | A           | 76          |
@@ -29,7 +29,7 @@ join dbo.menu as m
 on s.product_id = m.product_id
 group by s.customer_id
 ````
-#### Result
+**Result**
 | customer_id | visit_count |
 | ----------- | ----------- |
 | A           | 4          |
@@ -51,7 +51,7 @@ from
   on s.product_id = m.product_id) as temp
 where temp.rank = 1
 ````
-#### Result
+**Result**
 | customer_id | product_name | 
 | ----------- | ----------- |
 | A           | curry        | 
@@ -70,7 +70,7 @@ SELECT
   GROUP by product_name, s.product_id
   ORDER BY most_purchased DESC
 ````
-#### Result
+**Result**
 | most_purchased | product_name | 
 | ----------- | ----------- |
 | 8       | ramen |
@@ -90,7 +90,7 @@ from
 where rank =1 
 order by most_purchased DESC
 ````
-#### Result
+**Result**
 | customer_id | product_name | most_purchased |
 | ----------- | ----------- |---------|
 | A | ramen | 3 |
@@ -113,7 +113,7 @@ join dbo.menu m2
 on temp.product_id = m2.product_id
 WHERE temp.rank = 1
 ````
-#### Result
+**Result**
 | customer_id | product_name  | order_date |
 | ----------- | ---------- |----------  |
 | A           | curry      | 2021-01-07 |
@@ -133,7 +133,7 @@ join dbo.menu m2
 on temp.product_id = m2.product_id
 WHERE temp.rank = 1
 ````
-#### Result
+**Result**
 | customer_id | product_name  | order_date |
 | ----------- | ---------- |----------  |
 | A           |   sushi        |2021-01-01 |
@@ -153,7 +153,7 @@ on m2.product_id = s.product_id
 where s.order_date < m1.join_date
 GROUP by s.customer_id
 ````
-#### Result
+**Result**
 | customer_id | total_unique_items | total_amount |
 | ----------- | ---------- |----------  |
 | A           | 2 |  25       |
@@ -179,7 +179,7 @@ SELECT
 from cte as p 
 GROUP by customer_id
 ````
-#### Result
+**Result**
 | customer_id | total_points | 
 | ----------- | ---------- |
 | A           | 860 |
@@ -207,7 +207,7 @@ where order_date < '2021-01-31'
 ) p
 GROUP by customer_id
 ````
-#### Result
+**Result**
 | customer_id | total_points | 
 | ----------- | ---------- |
 | A           | 1370 |
